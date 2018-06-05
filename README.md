@@ -1,4 +1,4 @@
-# ban
+# BAN (Blockchain Accelerating Network)
 Vast documents for Blockchain Accelerating Network provide by Baishancloud
 
 Different directory represents different documents. Multi-lang versions locate in each directory.
