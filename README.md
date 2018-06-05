@@ -5,5 +5,5 @@ Different directory represents different documents. Multi-lang versions locate i
 
 What we have at current stage is as follows.
 
-* SDWAN for EOS Block Producer Connectivity ([English](), [中文]())
-* Get Started with BaishanCloud BAN ([English](), [中文]())
+* SDWAN for EOS Block Producer Connectivity ([English](), [简体中文]())
+* Get Started with BaishanCloud BAN ([English](), [简体中文]())
