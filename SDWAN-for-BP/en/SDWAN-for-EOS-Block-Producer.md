@@ -30,7 +30,7 @@ Talking about what makes BaishanCloud SDWAN more suitable for EOS BPs, I think t
 
 ### Globally Distributed Nodes
 
-![Image of BaishanCloud Nodes](sdwan2.png)
+![Image of BaishanCloud Nodes](sdwan-2.png)
 
 As you can see in the above image, BaishanCloud has SDWAN nodes all over the world. In details, BaishanCloud has nodes locate in more than 400 cities globally, more than 100 of which locate outside China mainland. Almost in every country you can find an access point of BaishanCloud SDWAN. This guarantees no matter where your BP nodes are, you can always get accelerated by the SDWAN.
 
