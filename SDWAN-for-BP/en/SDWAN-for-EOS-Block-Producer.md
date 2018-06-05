@@ -2,7 +2,7 @@
 
 ## Introduction to SDWAN
 
-Software Defined Wide Area Network, abbreviated by SDWAN, is a technique to stabilize and accelerate the connections between geographically distributed IT infrastructures. SDWAN can save lots of work struggling at how to conquer the connectivity problems in a WAN scenario. And also, SDWAN usually uses encrypted connections among entities connecting to the network, so the data is also well protected in SDWAN while traveling.
+Software Defined Wide Area Network, abbreviated by SDWAN, is a technique to stabilize and accelerate the connections between geographically distributed IT infrastructures. SDWAN can save lots of work struggling at how to conquer the connectivity problems in a WAN scenario. And also, SDWAN usually uses encrypted connections among entities connecting to the network, so the data is also well protected in SDWAN while traveling. BaishanCloud provids SDWAN service for its customers globally and its SDWAN is a better VPN solution.
 
 ## EOS Block Producer
 
@@ -57,6 +57,5 @@ WAN Optimization|Yes|Yes|No|Yes
 Smart Routing|No|No|Yes|Yes
 TCP Optimization|No|No|No|Yes
 Elastic Bandwidth|Yes|Yes|No|Yes
-Content Caching|No|No|No|Yes
 Instant Deployment|No|No|No|Yes
 Price|Very Low|Low|High|Low
