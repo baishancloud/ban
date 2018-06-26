@@ -4,25 +4,20 @@ BAN，Blockchain Accelerating Network，是白山云针对公有区块链网络�
 
 # 使用BAN服务的基本流程
 
-用户申请试用 → 获取Access Token → 在Dapp中带Token访问BAN → 使用区块链网络
+在Dapp中连接BAN服务的域名 → 使用区块链网络
+
+# BAN服务域名
+
+当前BAN服务只支持EOS区块链，并提供EOS主网和测试网络两种API接入域名：
+
+* EOS主网API: https://ban-api.baishancloud.com:3852
+* EOS测试网络JungleTestnet: https://ban-test-api.baishancloud.com:3852
 
 # 一个使用BAN部署智能合约的例子
 
-## 申请BAN Access Token
-首先需要在https://BAN.baishancloud.com中点击“申请试用”按钮：
+## 测试BAN网络服务域名
 
-![trail](ban-1.png)
-
-并正确填写相关信息后，点击提交。
-
-申请成功之后，我们会将Access Token发送到你的电子邮件地址，一个有效的Token类似如下形式：
-
-testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018
-
-注：目前BAN服务注册采用人工审核流程，请耐心等待或者联络我们。
-
-## 使用Token连接BAN
-在成功获取Token之后，就可以连接并使用BAN服务了，当前BAN连接的是一个EOS的测试网络 - JungleTestnet，因此使用BAN提供的API服务就相当于在使用JungleTestnet。
+本例子中使用的是EOS的测试网络 - JungleTestnet，因此需要通过BAN服务的Test API进行演示。
 
 BAN对外提供的API和EOS的官方API完全一致，因此在进行测试的时候可以自主选择API的调用方式，本文将使用EOS官方工具`cleos`来演示对通过BAN服务连接JungleTestnet的步骤。
 
@@ -31,14 +26,13 @@ BAN对外提供的API和EOS的官方API完全一致，因此在进行测试的�
 一个典型的使用`cleos`命令行工具连接BAN的方式如下所示：
 
 ```
-cleos -r "ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018" -u https://ban-api.baishancloud.com:3852 get info
+cleos -u https://ban-test-api.baishancloud.com:3852 get info
 ```
 
 说明：
 
-* `-r`参数用于设置发送HTTP请求时的请求头，BAN要求全部的区块链API请求需要带有名为`ban-token`的HTTP请求头，其值为之前申请的和发BAN Access Token
 * -u 参数用于设置要连接的区块链API地址，这里使用BAN服务指定的域名和端口，即
-[https://ban-api.baishancloud.com:3852](https://ban-api.baishancloud.com:3852)
+[https://ban-test-api.baishancloud.com:3852](https://ban-test-api.baishancloud.com:3852)
 注：目前BAN服务只提供基于HTTPS的访问，不支持明文访问
 * `get info`是`cleos`的选项，用于查询当前区块链网络的基本状态
 
@@ -115,7 +109,7 @@ Generated hello.abi
 我们的例子中，假设账户名为`bscstat12345`（此处需替换成你之前申请的账户名称），下面用此账户部署智能合约：
 
 ```
-cleos  -r "ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018" -u https://ban-api.baishancloud.com:3852 set contract bscstat12345 ../hello hello.wast hello.abi
+cleos -u https://ban-test-api.baishancloud.com:3852 set contract bscstat12345 ../hello hello.wast hello.abi
 ```
 
 如果执行成功，则会返回类似于如下的信息：
@@ -128,7 +122,7 @@ cleos  -r "ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c00
 在智能合约成功部署之后，可以用如下方式对合约中的`hi`方法进行调用：
 
 ```
-cleos -r "ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018" -v -u https://ban-api.baishancloud.com:3852 push action bscstat12345 hi '["someone"]' -p bscstat12345
+cleos -v -u https://ban-test-api.baishancloud.com:3852 push action bscstat12345 hi '["someone"]' -p bscstat12345
 ```
 
 调用成功后会返回类似如下信息：
