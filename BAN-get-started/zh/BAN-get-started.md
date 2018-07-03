@@ -79,6 +79,36 @@ cleos -u https://ban-api.baishancloud.com:3852 system listproducers
 cleos -u https://ban-api.baishancloud.com:3852 system voteproducer prods account1 candidate1
 ```
 
+## 注册BP
+
+```
+cleos -u https://ban-api.baishancloud.com:3852 system regproducer producer1
+```
+
+## 注销BP
+
+```
+cleos -u https://ban-api.baishancloud.com:3852 system unregprod producer1
+```
+
+## 抵押Token
+
+```
+cleos -u https://ban-api.baishancloud.com:3852 system delegatebw account1 account1 '10000 EOS' '10000 EOS'
+```
+
+## 查看Token抵押
+
+```
+cleos -u https://ban-api.baishancloud.com:3852 system listbw account1
+```
+
+## 解除Token抵押
+
+```
+cleos -u https://ban-api.baishancloud.com:3852 system undelegatebw account1 account1 "10000 EOS" "10000 EOS" -p account1
+```
+
 ## 买卖内存
 
 ```
