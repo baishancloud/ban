@@ -2,6 +2,8 @@
 
 BAN，Blockchain Accelerating Network，是白山云针对公有区块链网络而设计的一种加速网络服务。BAN服务按照地理位置分布提供了数量众多的EOS全节点，这样Dapp（去中心化应用程序）可以实现快速的连接到这些全节点所提供的区块链API，并使用这些API完成信息查询、智能合约发布以及交易推送等动作。本文接下来将基于EOS官方的`cleos`命令行工具，对如何使用BAN服务实现Dapp的快速API调用进行介绍，使大家对BAN服务有个直观的认识。
 
+关于BAN服务的技术细节，请参考[BAN技术白皮书](https://github.com/baishancloud/ban/wiki/BAN%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6)
+
 # 使用BAN服务的基本流程
 
 在Dapp中连接BAN服务的域名 → 使用区块链网络
