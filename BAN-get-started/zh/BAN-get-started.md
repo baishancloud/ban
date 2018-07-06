@@ -131,13 +131,13 @@ BAN对外提供的API和EOS的官方API完全一致，因此在进行测试的�
 一个典型的使用`cleos`命令行工具连接BAN的方式如下所示：
 
 ```
-cleos -u https://ban-test-api.baishancloud.com:3852 get info
+cleos -u https://eos-test.oasisgo.net:3852 get info
 ```
 
 说明：
 
 * -u 参数用于设置要连接的区块链API地址，这里使用BAN服务指定的域名和端口，即
-[https://ban-test-api.baishancloud.com:3852](https://ban-test-api.baishancloud.com:3852)
+[https://eos-test.oasisgo.net:3852](https://eos-test.oasisgo.net:3852)
 注：目前BAN服务只提供基于HTTPS的访问，不支持明文访问
 * `get info`是`cleos`的选项，用于查询当前区块链网络的基本状态
 
@@ -214,7 +214,7 @@ Generated hello.abi
 我们的例子中，假设账户名为`bscstat12345`（此处需替换成你之前申请的账户名称），下面用此账户部署智能合约：
 
 ```
-cleos -u https://ban-test-api.baishancloud.com:3852 set contract bscstat12345 ../hello hello.wast hello.abi
+cleos -u https://eos-test.oasisgo.net:3852 set contract bscstat12345 ../hello hello.wast hello.abi
 ```
 
 如果执行成功，则会返回类似于如下的信息：
@@ -227,7 +227,7 @@ cleos -u https://ban-test-api.baishancloud.com:3852 set contract bscstat12345 ..
 在智能合约成功部署之后，可以用如下方式对合约中的`hi`方法进行调用：
 
 ```
-cleos -v -u https://ban-test-api.baishancloud.com:3852 push action bscstat12345 hi '["someone"]' -p bscstat12345
+cleos -v -u https://eos-test.oasisgo.net:3852 push action bscstat12345 hi '["someone"]' -p bscstat12345
 ```
 
 调用成功后会返回类似如下信息：

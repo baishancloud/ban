@@ -28,12 +28,12 @@ One typical usage of `cleos` with BAN is as follows:
 
 
 ```
-cleos -u https://ban-test-api.baishancloud.com:3852 get info
+cleos -u https://eos-test.oasisgo.net:3852 get info
 ```
 
 Description:
 
-* `-u` option is used to specify the address of blockchain API, here we need to specify the BAN testnet domain, which is [https://ban-test-api.baishancloud.com:3852](https://ban-test-api.baishancloud.com:3852)
+* `-u` option is used to specify the address of blockchain API, here we need to specify the BAN testnet domain, which is [https://eos-test.oasisgo.net:3852](https://eos-test.oasisgo.net:3852)
 Note: BAN provides only HTTPS access.
 * `get info` is another option of `cleos`，which is used to query the current generic information of the blockchain network.
 
@@ -111,7 +111,7 @@ From now on, we will use the account created in previous section. So you need to
 In our example, we suppose the account name as `bscstat12345` (You need to replace this with your own account name). Deploy the smart contract as follows:
 
 ```
-cleos -u https://ban-test-api.baishancloud.com:3852 set contract bscstat12345 ../hello hello.wast hello.abi
+cleos -u https://eos-test.oasisgo.net:3852 set contract bscstat12345 ../hello hello.wast hello.abi
 ```
 
 If the command executes successfully, it will return results like this:
@@ -125,7 +125,7 @@ If you encounter some errors while deploying the contract, it probably is someth
 After the contract is deployed, we can use the following command to invoke the `hi` method in the contract:
 
 ```
-cleos -v -u https://ban-test-api.baishancloud.com:3852 push action bscstat12345 hi '["someone"]' -p bscstat12345
+cleos -v -u https://eos-test.oasisgo.net:3852 push action bscstat12345 hi '["someone"]' -p bscstat12345
 ```
 
 It will return something like this if successfully:
