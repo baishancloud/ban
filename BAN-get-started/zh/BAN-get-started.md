@@ -28,94 +28,94 @@ BAN，Blockchain Accelerating Network，是白山云针对公有区块链网络�
 使用account1创建account2账户：
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 system newaccount --transfer --stake-net "100.0000 EOS" --stake-cpu "100.0000 EOS" --buy-ram "100.0000 EOS" account1 account2
+cleos -u https://eos.oasisgo.net:3852 system newaccount --transfer --stake-net "100.0000 EOS" --stake-cpu "100.0000 EOS" --buy-ram "100.0000 EOS" account1 account2
 ```
 
 ## EOS转账
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 transfer account1 account2 "100.0000 EOS"
+cleos -u https://eos.oasisgo.net:3852 transfer account1 account2 "100.0000 EOS"
 ```
 
 ## 账户查询
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 get account account1
-cleos -u https://ban-api.baishancloud.com:3852 get account account2
+cleos -u https://eos.oasisgo.net:3852 get account account1
+cleos -u https://eos.oasisgo.net:3852 get account account2
 ```
 
 ## 账户余额查询
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 get currency balance eosio.token account1
-cleos -u https://ban-api.baishancloud.com:3852 get currency balance eosio.token account2
+cleos -u https://eos.oasisgo.net:3852 get currency balance eosio.token account1
+cleos -u https://eos.oasisgo.net:3852 get currency balance eosio.token account2
 ```
 
 ## 使用eosio.token合约创建新token
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 push action eosio.token create '["account1", "1000000000.0000 EN"]' -p eosio.token
+cleos -u https://eos.oasisgo.net:3852 push action eosio.token create '["account1", "1000000000.0000 EN"]' -p eosio.token
 ```
 
 ## 发行Token
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 push action eosio.token issue '["account1", "1000000000.0000 EN", "memo"]' -p account1
+cleos -u https://eos.oasisgo.net:3852 push action eosio.token issue '["account1", "1000000000.0000 EN", "memo"]' -p account1
 ```
 
 ## 查询Token余额
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 get currency balance eosio.token account1
+cleos -u https://eos.oasisgo.net:3852 get currency balance eosio.token account1
 ```
 
 ## 查看BP列表
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 system listproducers
+cleos -u https://eos.oasisgo.net:3852 system listproducers
 ```
 
 ## 投票
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 system voteproducer prods account1 candidate1
+cleos -u https://eos.oasisgo.net:3852 system voteproducer prods account1 candidate1
 ```
 
 ## 注册BP
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 system regproducer producer1
+cleos -u https://eos.oasisgo.net:3852 system regproducer producer1
 ```
 
 ## 注销BP
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 system unregprod producer1
+cleos -u https://eos.oasisgo.net:3852 system unregprod producer1
 ```
 
 ## 抵押Token
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 system delegatebw account1 account1 '10000 EOS' '10000 EOS'
+cleos -u https://eos.oasisgo.net:3852 system delegatebw account1 account1 '10000 EOS' '10000 EOS'
 ```
 
 ## 查看Token抵押
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 system listbw account1
+cleos -u https://eos.oasisgo.net:3852 system listbw account1
 ```
 
 ## 解除Token抵押
 
 ```
-cleos -u https://ban-api.baishancloud.com:3852 system undelegatebw account1 account1 "10000 EOS" "10000 EOS" -p account1
+cleos -u https://eos.oasisgo.net:3852 system undelegatebw account1 account1 "10000 EOS" "10000 EOS" -p account1
 ```
 
 ## 买卖内存
 
 ```
-cleos system buyram account1 account1 "100.0000 EOS" -p account1
-cleos system sellram account1 1048576
+cleos -u https://eos.oasisgo.net:3852 system buyram account1 account1 "100.0000 EOS" -p account1
+cleos -u https://eos.oasisgo.net:3852 system sellram account1 1048576
 ```
 
 # 一个使用BAN部署智能合约的例子
