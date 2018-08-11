@@ -13,7 +13,7 @@ BAN，Blockchain Accelerating Network，是白山云针对公有区块链网络�
 当前BAN服务支持比特币，以太坊和EOS：
 
 * Bitcoin
-	* https://eos.oasisgo.net:3852
+	* https://btc.oasisgo.net:3852
 * Ethereum
 	* Ethereum主网
 		* https://eth.oasisgo.net:3852
