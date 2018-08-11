@@ -10,12 +10,18 @@ BAN，Blockchain Accelerating Network，是白山云针对公有区块链网络�
 
 # BAN服务域名
 
-当前BAN服务只支持EOS区块链，并提供EOS主网和测试网络两种API接入域名：
+当前BAN服务支持比特币，以太坊和EOS：
 
-* EOS主网API:
+* Bitcoin
 	* https://eos.oasisgo.net:3852
-* EOS测试网络JungleTestnet:
-	* https://eos-test.oasisgo.net:3852
+* Ethereum
+	* Ethereum主网
+		* https://eth.oasisgo.net:3852
+* EOS
+	* EOS主网API:
+		* https://eos.oasisgo.net:3852
+	* EOS测试网络JungleTestnet:
+		* https://eos-test.oasisgo.net:3852
 
 # 使用BAN进行EOS常用操作的例子
 

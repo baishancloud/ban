@@ -9,10 +9,18 @@ Connect to BAN domain in Dapp -> Use the blockchain network
 
 # Domains in BAN
 
-Currently BAN only supports EOS blockchain and it simultaneously provides two domains for access of EOS mainnet and JungleTestnet respectively: 
+Currently BAN only supports Bitcoin, Ethereum and EOS: 
 
-* EOS mainnet API: https://eos.oasisgo.net:3852
-* EOS JungleTestnet: https://eos-test.oasisgo.net:3852
+* Bitcoin
+	* https://eos.oasisgo.net:3852
+* Ethereum
+	* Ethereum Mainnet
+		* https://eth.oasisgo.net:3852
+* EOS
+	* EOS Mainnet
+		* https://eos.oasisgo.net:3852
+	* EOS JungleTestnet
+		* https://eos-test.oasisgo.net:3852
 
 # One Example of Deploying EOS Smart Contract with BAN
 
