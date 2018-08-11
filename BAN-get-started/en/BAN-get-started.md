@@ -12,7 +12,7 @@ Connect to BAN domain in Dapp -> Use the blockchain network
 Currently BAN only supports Bitcoin, Ethereum and EOS: 
 
 * Bitcoin
-	* https://eos.oasisgo.net:3852
+	* https://btc.oasisgo.net:3852
 * Ethereum
 	* Ethereum Mainnet
 		* https://eth.oasisgo.net:3852
