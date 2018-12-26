@@ -6,7 +6,19 @@ BAN，Blockchain Accelerating Network，是白山云针对公有区块链网络�
 
 # 使用BAN服务的基本流程
 
-在Dapp中连接BAN服务的域名 → 使用区块链网络
+用户申请试用 → 获取Access Token → 在Dapp中带Token访问BAN → 使用区块链网络
+
+# 申请BAN Access Token
+
+首先需要在https://BAN.baishancloud.com中点击“申请试用”按钮：
+
+![trail](ban-1.png)
+
+并正确填写相关信息后，点击提交。
+
+申请成功之后，我们会将Access Token发送到你的电子邮件地址，一个有效的Token类似如下形式：
+
+testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018
 
 # BAN服务域名
 
@@ -20,8 +32,27 @@ BAN，Blockchain Accelerating Network，是白山云针对公有区块链网络�
 * EOS
 	* EOS主网API:
 		* https://eos.oasisgo.net:3852
-	* EOS测试网络JungleTestnet:
-		* https://eos-test.oasisgo.net:3852
+
+# 使用Token连接BAN
+
+在成功获取Token之后，就可以连接并使用BAN服务，包括上述的三个域名。在通过HTTP API连接BAN服务的时候，需要在HTTP请求中带有形式为：
+
+ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018
+
+的HTTP请求头，其中ban-token为请求头的名字，其值为从BAN官网申请到的Access Token。
+
+以EOS的`cleos`命令行为例：
+
+```
+cleos -r "ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018" -u https://eos.oasisgo.net:3852 get info
+```
+
+说明：
+
+* `-r`参数用于设置发送HTTP请求时的请求头，BAN要求全部的区块链API请求需要带有名为`ban-token`的HTTP请求头，其值为之前申请的合法BAN Access Token
+* -u 参数用于设置要连接的区块链API地址，这里使用BAN服务指定的域名和端口，即 [https://eos.oasisgo.net:3852](https://eos.oasisgo.net:3852)
+注：目前BAN服务只提供基于HTTPS的访问，不支持明文访问
+* `get info`是`cleos`的选项，用于查询当前区块链网络的基本状态
 
 # 使用BAN进行EOS常用操作的例子
 
