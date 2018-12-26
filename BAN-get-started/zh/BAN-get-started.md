@@ -50,7 +50,8 @@ ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018
 以EOS的`cleos`命令行为例：
 
 ```
-cleos -r "ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018" -u https://eos.oasisgo.net:3852 get info
+cleos -r "ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018" \
+      -u https://eos.oasisgo.net:3852 get info
 ```
 
 说明：
