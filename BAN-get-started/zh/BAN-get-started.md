@@ -45,6 +45,8 @@ ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018
 
 的HTTP请求头，其中ban-token为请求头的名字，其值为从BAN官网申请到的Access Token。
 
+## EOS的例子
+
 以EOS的`cleos`命令行为例：
 
 ```
@@ -59,6 +61,22 @@ cleos -r "ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c001
 * `get info`是`cleos`的选项，用于查询当前区块链网络的基本状态
 
 对于BTC和ETH也是同理，需要在Dapp访问BAN服务域名的时候加上上述ban-token的HTTP请求头。
+
+## Bitcoin的例子
+
+```
+curl --data-binary '{"jsonrpc":"1.0","id":"curltext","method":"getblockchaininfo","params":[]}' \
+     -H 'content-type:text/plain;' https://btc.oasisgo.net:3852/ -v \
+     -H 'ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018'
+```
+
+## Ethereum的例子
+
+```
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' \
+     'https://eth.oasisgo.net:3852' -H "Content-Type: application/json" \
+     -H 'ban-token:testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018'
+```
 
 # 延伸阅读
 
