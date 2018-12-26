@@ -19,8 +19,6 @@ Currently BAN only supports Bitcoin, Ethereum and EOS:
 * EOS
 	* EOS Mainnet
 		* https://eos.oasisgo.net:3852
-	* EOS JungleTestnet
-		* https://eos-test.oasisgo.net:3852
 
 # One Example of Deploying EOS Smart Contract with BAN
 

@@ -10,7 +10,7 @@ BAN，Blockchain Accelerating Network，是白山云针对公有区块链网络�
 
 # 申请BAN Access Token
 
-首先需要在https://BAN.baishancloud.com中点击“申请试用”按钮：
+首先需要在[https://BAN.baishancloud.com](https://ban.baishancloud.com)中点击“申请试用”按钮：
 
 ![trail](ban-1.png)
 
@@ -18,7 +18,9 @@ BAN，Blockchain Accelerating Network，是白山云针对公有区块链网络�
 
 申请成功之后，我们会将Access Token发送到你的电子邮件地址，一个有效的Token类似如下形式：
 
+```
 testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018
+```
 
 # BAN服务域名
 
@@ -37,7 +39,9 @@ testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018
 
 在成功获取Token之后，就可以连接并使用BAN服务，包括上述的三个域名。在通过HTTP API连接BAN服务的时候，需要在HTTP请求中带有形式为：
 
+```
 ban-token: testaccount#d196893de197091fbecaf371f2614b4b35cc2c8d961c0018
+```
 
 的HTTP请求头，其中ban-token为请求头的名字，其值为从BAN官网申请到的Access Token。
 
